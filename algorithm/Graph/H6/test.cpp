@@ -1,14 +1,15 @@
 /*
  * @Author: your name
  * @Date: 2021-10-22 17:58:47
- * @LastEditTime: 2021-10-22 18:23:41
- * @LastEditors: your name
+ * @LastEditTime: 2021-10-25 21:47:55
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \code\algorithm\Graph\H6\test.cpp
  */
 #include <stdio.h>
 #include <vector>
 #include <queue>
+#include <iostream>
 const int maxn = 20000 + 10;
 using namespace std;
 int in[maxn];
@@ -67,18 +68,12 @@ void init(int n)
 }
 int main()
 {
-    int n, m;
-    while (scanf("%d %d", &n, &m) != EOF)
-    {
-        init(n);
-        for (int i = 0; i < m; i++)
-        {
-            int u, t;
-            scanf("%d %d", &u, &t);
-            gra[t].push_back(u);
-            in[u]++;
-        }
-        int s = tou(n);
-        printf("%d\n", s);
-    }
+    int a = 6;
+    int *p = &a;
+
+    int *b = p;
+    cout << *p << *b << endl;
+    *b = 7;
+    cout << *p << *b << endl;
+    system("pause");
 }
